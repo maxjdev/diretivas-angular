@@ -1,0 +1,30 @@
+<h1>NgIf</h1>
+<app-card *ngIf="isAlived; else alias"></app-card>
+<ng-template #alias>
+  <h1>NG TEMPLATE</h1>
+</ng-template>
+<button (click)="isAlived = !isAlived">
+  Toggle NgIf
+</button>
+<hr>
+<h1>NgFor</h1>
+<app-list></app-list>
+<hr>
+<div [ngSwitch]="menuType">
+  <div *ngSwitchDefault>
+    <li>Add Card</li>
+    <li>Remove Card</li>
+  </div>
+  <div *ngSwitchCase="'admin'">
+    <li>Add Card</li>
+    <li>Remove Card</li>
+    <li>ADMIN Option</li>
+  </div>
+  <div *ngSwitchCase="'root'">
+    <li>Add Card</li>
+    <li>Remove Card</li>
+    <li>ADMIN Option</li>
+    <li>ROOT USER</li>
+  </div>
+</div>
+<router-outlet />

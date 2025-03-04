@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let item of products;
+   let i = index"
+   (click)="removeProduct(i)"
+  >
+    {{ i }} - {{ item }}
+  </li>
+
+  <button (click)="addProduct()">Add</button>
+  <button (click)="popProduct()">Remove Last</button>
+</ul>
