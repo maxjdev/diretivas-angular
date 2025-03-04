@@ -1,0 +1,8 @@
+.enable {
+  color: blueviolet;
+  font-size: large;
+}
+.disable {
+  color: red;
+  font-weight: bold;
+}
